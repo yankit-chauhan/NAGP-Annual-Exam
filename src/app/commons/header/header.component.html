@@ -1,0 +1,15 @@
+<mat-toolbar class="head-nav">
+    <mat-toolbar-row>
+        <span class="title">HOSPITAL APP</span>
+        <span class="spacer"></span>
+        <button class="btn-log" *ngIf="isLoggedIn" type="button" mat-button color="warn" (click)="logout()">
+            <mat-icon>account_circle</mat-icon> {{username | uppercase}}
+        </button>
+        <button class="btn-log" *ngIf="!isLoggedIn" type="button" mat-button color="accent" (click)="login()">
+            <mat-icon>account_circle</mat-icon> LOGIN
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
